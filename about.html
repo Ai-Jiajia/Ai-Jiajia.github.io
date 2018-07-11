@@ -28,6 +28,20 @@
             .about-footer:hover{
             	color:#af929d;
             }
+            .wei{
+            	text-decoration:line-through
+            }
+            .sidebar-module a{
+            	color: #e6c7d3;
+            }
+            .sidebar-module a:hover{
+            	color: #af929d;
+            }
+            .col-sm-3.col-sm-offset-1.blog-sidebar{
+                position: fixed;
+                width: 300px;
+                left: 970px;
+            }
         </style>
 
         <meta name="description" content="">
@@ -82,14 +96,9 @@
             <p>一些艺术家或者时尚工作者可能会想要搭建一个属于自己的博客，并且用博客来展现自己的作品、生活方式或者品味。但是对于这样的非专业编程人员，完全独立地搭建个人博客是比较有难度的；直接套用网络上的模版又会导致自己的博客没有创意。</p>
             <p>本站的搭建方式可能比较符合这类人的需求，比较简便、易操作并且有自己创作的发挥空间。因此我将在下面简单的介绍本站的搭建过程，以供参考。</p>
             <p>但是注意，想要有自己的发挥空间还是要求你有一定的基础知识的。</p>
-            <p>（基础知识清单：了解html5常用标签；html5中如何引用css；id和class的概念；div的概念；有了上面的基础知识，你就可以大致读懂html5文件了，并进行一些简单的修改）</p>
+            <p>（基础知识清单：了解html5常用标签；html5中如何引用css；id和class的概念；div的概念；js基本语法；有了上面的基础知识，你就可以大致读懂html5文件了，并进行一些简单的修改）</p>
             <hr>
-            <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-            <blockquote>
-              <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </blockquote>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <h2>第一章 环境的搭建</h2>
+            <h2 id="dajian">第一章 环境的搭建</h2>
             <p>本站在搭建中，使用了bootstrap和HTML5 Boilerplate框架，在此简单地讲解一下环境的搭建。</p>
             <h3>1.1下载bootstrap和HTML5 Boilerplate</h3>
             <p>访问<a href="https://v3.bootcss.com">https://v3.bootcss.com</a>，如下图选择，下载bootstrap；</p>
@@ -97,22 +106,41 @@
             <p>访问<a href="https://html5boilerplate.com">https://html5boilerplate.com</a>，下载HTML5 Boilerplate；</p>
             <h3>1.2搭建</h3>
             <p>新建文件夹，命名为environment；将刚才下载的两个文件夹拖入environment；</p>
-            <pre><code>Example code block</code></pre>
-            <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
-            <h3>Sub-heading</h3>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-            <ol>
-              <li>Vestibulum id ligula porta felis euismod semper.</li>
-              <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-              <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
-            </ol>
-            <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            <p>打开environment/bootstrap-3.3.7-dist/css，将其中的bootstrap.min.css复制到environment/ html5-boilerplate-master/dist/css中；打开environment/bootstrap-3.3.7-dist/js，将其中的bootstrap.min.js放入html5-boilerplate-master/dist/js；</p>
+            <h2 id="bootstrap">第二章 借助bootstrap实例快速搭建个人博客</h2>
+            <p>在我的博客的搭建过程中，我参照了bootstra官网的几个实例精选：<a href="https://v3.bootcss.com/examples/cover/">封面图、</a><a href="https://v3.bootcss.com/examples/carousel/">Carousel、</a><a href="https://v3.bootcss.com/examples/blog/">博客页面</a>（通过这几个链接你可以拿到实例的源代码）；</p>
+            <p>拿到源代码以后将其放在正确路径下，按照自己的需求相应地修改html、css和js即可；</p>
+            <p>以我自己的网站为例，封面图页面中，我为了让图片不重复地平铺铺满整个页面，需要在css中添加如下代码：</p>
+            <pre><code>background: #3d71b8 url(img/0503_1.jpg);  
+            background-size: 100%;  
+            background-position:center;</code></pre>
+            <p>ps：封面图片由我本人拍摄自哈尔滨工业大学校园；</p>
+            <p>修改css来改变learn more按钮的不透明度：</p>
+            <pre><code>filter:alpha(opacity=60); 
+       -moz-opacity:0.6; 
+       -khtml-opacity: 0.6; 
+       opacity: 0.6;</code></pre>
+            <p>总而言之，bootstra的自由的非常高，只要掌握一定的基础知识即可上手使用。</p>
+            <h2 id="fangwen">第三章 使你的网站可以被访问</h2>
+            <h3>3.1购买域名</h3>
+            <p>选择一个可靠的平台来购买域名，我选择了阿里云来购买Aijiajia.wang这个顶级域名，需要注意的是你要记住你的租用时间并及时续费；</p>
+            <h3>3.2<span class="wei">租用服务器</span>下载github desktop</h3>
+            <p>正常来讲的话，这一步应该是租用服务器，通过服务器来解析域名，但是在这里我并没有采用这个方法，这主要是因为我习惯于使用ios系统，远程桌面或者使用虚拟机都比较麻烦，此外如果自己租用服务器，域名是要备案的，备案需要等待将近一个月的时间。由于以上的这些原因，我选择借助gitpage来使我的博客上线；</p>
+            <p>登陆GitHub，在gitpage新建一个分支，仓库名为Aijiajia.gitpage.io；下载github desktop；将网页所需的所有文件上传至仓库，并在这个文件夹内新建一个readme文件和一个CNAME文件，CNAME文件可以使原本混乱、难以记忆的网址重新定向至我的博客域名，即Aijiajia.Wang；</p>
+            <p>完成这一步以后，你的网站就可以通过互联网被访问啦！</p>
+            <h2 id="gaijin">第四章 一些功能的实现与细节改进</h2>
+            <h3>4.1自定义鼠标图案</h3>
+            <p>为了让你的网站与众不同，你可以为它添加一些特殊而有趣的细节，比如我现在要举的例子，为你的网站添加一个别致的鼠标图案；</p>
+            <p>既然你浏览了我的网站，你一定已经看到效果了；这个像素风的爱心鼠标图案是我在ipad pro上手绘的，使用了app MediBang Paint的像素笔刷，顺带一提，这个笔刷十分实用。</p>
+            <p>绘制完成以后，把它放在正确的路径下，很重要的一点是，要把它从.png格式转换为.ico格式，在此推荐一个在线转换工具<a href="https://lvwenhan.com/convertico/">converticon[dot]com</a>,这个工具的缺点是需要浏览器有flash插件，而flash插件极易导致MacBook发烫严重。</p>
+            <p>此外，我还把这个ico文件用来做favicon，也就是收藏夹图标，用以方便而显著地将你的网站与其他网站区分开来。</p>
+            <p>实现代码如下，这行代码要放在html的head中：</p>
+            <p></p>
+            <pre><code> &lt; link &gt;rel="icon" href="favicon.ico"></code></pre>
+            <p>一个有趣的问题是，上面显示的那行代码如果我直接放在&lt;code&gt;标签中，浏览器会直接解释它而不在页面中显示，为此要使用转义符，这里就不展开讲了；</p>
+            <h3>4.2实现访问量统计功能</h3>
+            <h3>4.3添加评论功能</h3>
+            <h3>4.4添加打赏功能</h3>
           </div><!-- /.blog-post -->
 
           <div class="blog-post">
@@ -127,19 +155,6 @@
             <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
           </div><!-- /.blog-post -->
 
-          <div class="blog-post">
-            <h2 class="blog-post-title">New feature</h2>
-            <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <ul>
-              <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-            <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
-          </div><!-- /.blog-post -->
 
           <nav>
             <ul class="pager">
@@ -176,28 +191,12 @@ s.setAttribute('data-timestamp', +new Date());
             <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
           </div>
           <div class="sidebar-module">
-            <h4>Archives</h4>
+            <h4>目录</h4>
             <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>
-          </div>
-          <div class="sidebar-module">
-            <h4>Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
+              <li><a href="#dajian">第一章 环境的搭建</a></li>
+              <li><a href="#bootstrap">第二章 借助bootstrap实例快速搭建个人博客</a></li>
+              <li><a href="#fangwen">第三章 使你的网站可以被访问</a></li>
+              <li><a href="#gaijin">第四章 一些功能的实现与细节改进</a></li>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
