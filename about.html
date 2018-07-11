@@ -17,10 +17,16 @@
             }
             .ds-reward-stl{
             	position: relative;
-            	left: 375px;
+            	left: 348px;
             }
-            .dsRewardBtn{
-            	width: 20px;
+            #dsRewardBtn{
+            	width: 55px;
+            }
+            .about-footer{
+            	color: #e6c7d3;
+            }
+            .about-footer:hover{
+            	color:#af929d;
             }
         </style>
 
@@ -141,9 +147,11 @@
               <li><a href="#">Next</a></li>
             </ul>
           </nav>
+
 <div class="ds-reward-stl">
-  <button id="dsRewardBtn" onclick="PaymentUtils.show();">赏</button>
+<img id="dsRewardBtn" onclick="PaymentUtils.show();" src="img/ds.png">
 </div>
+
 <div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
@@ -202,9 +210,9 @@ s.setAttribute('data-timestamp', +new Date());
     
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>©2018Aijiajia</p>
       <p>
-        <a href="#">Back to top</a>
+        <a href="#" class=about-footer>Back to top</a>
       </p>
     </footer>
 
