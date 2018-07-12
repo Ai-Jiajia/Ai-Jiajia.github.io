@@ -12,6 +12,36 @@
 
         <style type="text/css">            
             *{ cursor:url(mouse.ico),auto;}  
+            .pull-right a{
+              color: #e6c7d3;
+            }
+            .pull-right a:hover{
+              color: #af929d;
+            }
+            .featurette-heading a{
+              color: #e6c7d3;
+            }
+            .featurette-heading a:hover{
+              color: #af929d;
+            }
+            .featurette-image.img-responsive.center-block{
+              display: block;
+              border: 0;
+              width: 100%;
+              transform: scale(1);
+              transition: all 1s ease 0s;
+              -webkit-transform: scale(1);
+              -webkit-transform: all 1s ease 0s;
+            }
+           .featurette-image.img-responsive.center-block:hover{
+              transform: scale(1.3);
+              transition: all 1s ease 0s;
+              -webkit-transform: scale(1.1);
+              -webkit-transform: all 1s ease 0s;
+            }
+            .carousel-inner img {
+width:100%;
+}
         </style>
 
         <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -50,12 +80,11 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <img class="first-slide" src="img/first-slide.jpg" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Example headline.</h1>
               <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
             </div>
           </div>
         </div>
@@ -65,7 +94,7 @@
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+              
             </div>
           </div>
         </div>
@@ -75,7 +104,7 @@
             <div class="carousel-caption">
               <h1>One more for good measure.</h1>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+              <!--<p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>-->
             </div>
           </div>
         </div>
@@ -128,10 +157,10 @@
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading"><a href="http://aijiajia.wang/about.html">About my blog.<span class="text-muted"></span></a></h2>
-          <p class="lead">在这篇文章中，我将简单的讲述一下关于本站的搭建。我使用了bootstrap和HTML5 Boilerplate框架，并进行了一点小小的发挥。</p>
+          <p class="lead">在这篇文章中，我将简单的讲述一下关于本站的搭建过程，这对于想要搭建个人博客的人来说是有帮助的，而且这个搭建过程不需要掌握很多的预备知识。在这里，我使用了bootstrap和HTML5 Boilerplate框架，并进行了一点小小的发挥。</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" src="img/0503_1.jpg" alt="about My Blog">
+          <a href="http://aijiajia.wang/about.html"><img class="featurette-image img-responsive center-block" src="img/0503_1.jpg" alt="about My Blog" ></a>
         </div>
       </div>
 
@@ -149,7 +178,7 @@
 
       <hr class="featurette-divider">
 
-      <div class="row featurette">
+      <!--<div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
           <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
@@ -159,7 +188,7 @@
         </div>
       </div>
 
-      <hr class="featurette-divider">
+      <hr class="featurette-divider">-->
 
       <!-- /END THE FEATURETTES -->
 

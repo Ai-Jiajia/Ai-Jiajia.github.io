@@ -8,7 +8,7 @@
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
 
-        <title>搭建自己的博客</title>
+        <title>如何快速搭建个人博客</title>
 
         <style type="text/css"> 
             *{ cursor:url(mouse.ico),auto;}  
@@ -17,7 +17,8 @@
             }
             .ds-reward-stl{
             	position: relative;
-            	left: 348px;
+            	left: 335px;
+            	top: -20px;
             }
             #dsRewardBtn{
             	width: 55px;
@@ -42,6 +43,7 @@
                 width: 300px;
                 left: 970px;
             }
+
         </style>
 
         <meta name="description" content="">
@@ -82,7 +84,7 @@
     <div class="container">
 
       <div class="blog-header">
-        <h1 class="blog-title">搭建自己的博客</h1>
+        <h1 class="blog-title">如何快速搭建个人博客</h1>
         <p class="lead blog-description">这里将讲述一些对于非专业编程人士来说比较简易、有可操作性的搭建博客的方法。</p>
       </div>
 
@@ -111,15 +113,15 @@
             <p>在我的博客的搭建过程中，我参照了bootstra官网的几个实例精选：<a href="https://v3.bootcss.com/examples/cover/">封面图、</a><a href="https://v3.bootcss.com/examples/carousel/">Carousel、</a><a href="https://v3.bootcss.com/examples/blog/">博客页面</a>（通过这几个链接你可以拿到实例的源代码）；</p>
             <p>拿到源代码以后将其放在正确路径下，按照自己的需求相应地修改html、css和js即可；</p>
             <p>以我自己的网站为例，封面图页面中，我为了让图片不重复地平铺铺满整个页面，需要在css中添加如下代码：</p>
-            <pre><code>background: #3d71b8 url(img/0503_1.jpg);  
-            background-size: 100%;  
-            background-position:center;</code></pre>
+            <pre><code>          background: #3d71b8 url(img/0503_1.jpg);  
+                      background-size: 100%;  
+                      background-position:center;</code></pre>
             <p>ps：封面图片由我本人拍摄自哈尔滨工业大学校园；</p>
             <p>修改css来改变learn more按钮的不透明度：</p>
-            <pre><code>filter:alpha(opacity=60); 
-       -moz-opacity:0.6; 
-       -khtml-opacity: 0.6; 
-       opacity: 0.6;</code></pre>
+            <pre><code>          filter:alpha(opacity=60); 
+                 -moz-opacity:0.6; 
+                 -khtml-opacity: 0.6; 
+                 opacity: 0.6;</code></pre>
             <p>总而言之，bootstra的自由的非常高，只要掌握一定的基础知识即可上手使用。</p>
             <h2 id="fangwen">第三章 使你的网站可以被访问</h2>
             <h3>3.1购买域名</h3>
@@ -156,15 +158,10 @@
           </div><!-- /.blog-post -->
 
 
-          <nav>
-            <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
-            </ul>
-          </nav>
+          
 
 <div class="ds-reward-stl">
-<img id="dsRewardBtn" onclick="PaymentUtils.show();" src="img/ds.png">
+<img id="dsRewardBtn" onclick="PaymentUtils.show();" src="img/ds4.png">
 </div>
 
 <div id="disqus_thread"></div>
